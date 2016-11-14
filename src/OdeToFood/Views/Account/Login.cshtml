@@ -1,8 +1,8 @@
-﻿@model RegisterViewModel
+﻿@model LoginViewModel
 @{
-    ViewBag.Title = "Register";
+    ViewBag.Title = "Login";
 }
-<form asp-controller="Account"  asp-action="Register" method="post">
+<form asp-controller="Account" asp-action="Login" method="post" asp-route-returnurl="@Model.ReturnUrl">
 
     <div asp-validation-summary="ValidationSummary.ModelOnly"></div>
     <div>
@@ -18,13 +18,11 @@
     </div>
 
     <div>
-        <label asp-for="ConfirmPassword"></label>
-        <input asp-for="ConfirmPassword" />
-        <span asp-validation-for="ConfirmPassword"></span>
+        <label asp-for="RememberMe"></label>
+        <input asp-for="RememberMe" />
+        <span asp-validation-for="RememberMe"></span>
     </div>
     <div>
         <input type="submit" value="Submit" />
     </div>
-
-  
-</form>
+    </form>
