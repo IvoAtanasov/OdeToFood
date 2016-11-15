@@ -45,6 +45,7 @@ namespace OdeToFood
         public void Configure(
             IApplicationBuilder app,
             IHostingEnvironment environment,
+
             IGreeter greeter)
         {
             app.UseIISPlatformHandler();
@@ -57,6 +58,8 @@ namespace OdeToFood
             app.UseRuntimeInfoPage("/info");
 
             app.UseFileServer();
+
+            //app.UseNodeModeles();
 
             app.UseIdentity();
 
