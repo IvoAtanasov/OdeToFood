@@ -1,19 +1,14 @@
-﻿using Microsoft.AspNet.Builder;
-using Microsoft.AspNet.FileProviders;
+﻿using Microsoft.AspNet.FileProviders;
 using Microsoft.AspNet.StaticFiles;
 using Microsoft.Extensions.PlatformAbstractions;
-using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Threading.Tasks;
 
-namespace OdeToFood.Migrations
+namespace Microsoft.AspNet.Builder
 {
     public static class ApplicationBuilderExtensions
     {
 
-        public static IApplicationBuilder UseNodeModels(this IApplicationBuilder app,IApplicationEnvironment env)
+        public static IApplicationBuilder UseNodeModeles(this IApplicationBuilder app,IApplicationEnvironment env)
         {
             var path = Path.Combine(env.ApplicationBasePath,"node_modules");
             var provider = new PhysicalFileProvider(path);
